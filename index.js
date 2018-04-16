@@ -33,7 +33,7 @@ class ImageLoad extends React.Component {
 
   render() {
     const {
-      style, source, resizeMode, borderRadius, backgroundColor, children,
+      style, source, resizeMode, resizeMethod, borderRadius, backgroundColor, children,
       loadingStyle, placeholderSource, placeholderStyle,
       customImagePlaceholderDefaultStyle
     } = this.props;
@@ -44,6 +44,7 @@ class ImageLoad extends React.Component {
         style={[styles.backgroundImage, style]}
         source={source}
         resizeMode={resizeMode}
+        resizeMethod={resizeMethod}
         borderRadius={borderRadius}
       >
         {
@@ -62,6 +63,7 @@ class ImageLoad extends React.Component {
             <Image
               style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle]}
               source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
+              resizeMethod={resizeMethod}
             >
             </Image>
           </View>
@@ -112,3 +114,4 @@ const styles = {
 }
 
 export default ImageLoad;
+
