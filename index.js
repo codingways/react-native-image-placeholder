@@ -63,7 +63,6 @@ class ImageLoad extends React.Component {
             <Image
               style={placeholderStyle ? placeholderStyle : [styles.imagePlaceholderStyles, customImagePlaceholderDefaultStyle]}
               source={placeholderSource ? placeholderSource : require('./Images/empty-image.png')}
-              resizeMethod={resizeMethod}
 	    >
             </Image>
           </View>
